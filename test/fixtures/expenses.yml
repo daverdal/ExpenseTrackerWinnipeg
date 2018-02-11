@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wardId: 1
+  journalDate: 2018-02-11 01:01:19
+  vendor: MyString
+  expenseType: 1
+  description: MyText
+  account: 1
+  amount: 9.99
+
+two:
+  wardId: 1
+  journalDate: 2018-02-11 01:01:19
+  vendor: MyString
+  expenseType: 1
+  description: MyText
+  account: 1
+  amount: 9.99
