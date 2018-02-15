@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   resources :about
   resources :wards
   resources :expenses
-  resources :expense_type
+  resources :expense_types
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
