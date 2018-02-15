@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :expensetypes
   get 'expense_type/new'
 
   get 'expense_type/create'
