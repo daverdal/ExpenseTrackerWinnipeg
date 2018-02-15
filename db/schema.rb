@@ -10,21 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180211012555) do
+ActiveRecord::Schema.define(version: 20180215163717) do
 
   create_table "expenses", force: :cascade do |t|
-    t.integer "wardId"
+    t.integer "wardNumber"
     t.datetime "journalDate"
     t.string "vendor"
-    t.integer "expenseType"
-    t.text "description"
-    t.integer "account"
+    t.string "expenseType"
+    t.string "description"
+    t.string "account"
     t.decimal "amount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "ward_id"
+    t.index ["ward_id"], name: "index_expenses_on_ward_id"
   end
 
   create_table "wards", force: :cascade do |t|
+    t.integer "wardNumber"
     t.string "name"
     t.string "councilor"
     t.datetime "created_at", null: false

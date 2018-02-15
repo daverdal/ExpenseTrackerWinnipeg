@@ -11,9 +11,10 @@
     </div>
   <% end %>
 
+ 
   <div class="field">
-    <%= form.label :wardId %>
-    <%= form.number_field :wardId, id: :expense_wardId %>
+    <%= form.label :ward_id %><br />
+    <%= form.collection_select :ward_id, @wards, :id, :name %>
   </div>
 
   <div class="field">

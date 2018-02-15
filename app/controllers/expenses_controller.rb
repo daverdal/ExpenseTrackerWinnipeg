@@ -15,16 +15,19 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   def new
     @expense = Expense.new
+    @wards = Ward.all
   end
 
   # GET /expenses/1/edit
   def edit
+    @wards = Ward.all
   end
 
   # POST /expenses
   # POST /expenses.json
   def create
     @expense = Expense.new(expense_params)
+    @wards = Ward.all
 
     respond_to do |format|
       if @expense.save
