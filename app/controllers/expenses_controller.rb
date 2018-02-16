@@ -16,6 +16,7 @@ class ExpensesController < ApplicationController
   def new
     @expense = Expense.new
     @wards = Ward.all
+    @expTypes = ExpenseType.all
   end
 
   # GET /expenses/1/edit

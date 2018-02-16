@@ -25,7 +25,7 @@
         <td><%= expense.expenseType %></td>
         <td><%= expense.description %></td>
         <td><%= expense.account %></td>
-        <td><%= expense.amount %></td>
+        <td>$<%= expense.amount %></td>
         <td><%= link_to 'Show', expense %></td>
         <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
         <td><%= link_to 'Destroy', expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>

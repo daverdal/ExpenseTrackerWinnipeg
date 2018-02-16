@@ -24,9 +24,9 @@ csv.each do |row|
 end
 
 #ExpenseTypes
-# puts "Outputting ExpenseTypes......................"
+puts "Outputting ExpenseTypes......................"
 ExpenseType.delete_all
-10.times do |row|
+10.times do
   t = ExpenseType.new
   t.description = Faker::Friends.location
   t.save
@@ -44,7 +44,7 @@ csv1.each do |row|
   #get the ward and attach it to the expense below....
  # if(row[8] != nil)
   ward1 = Ward.find_by_wardNumber(row[0])
-  expenseType1 = ExpenseType.last
+  expenseType1 = ExpenseType.first
     t = Expense.new
   t.expenseType = expenseType1
     t.ward = ward1
@@ -66,7 +66,7 @@ end
 
 puts "There are now #{Expense.count} Expense claims in the system"
 puts "There are now #{Ward.count} Wards in the system"
-puts "Faker:Name.name is: #{Faker::Name.name}"
+puts "There are now #{ExpenseType.count} ExpenseTypes in the system"
 
 
 

@@ -28,9 +28,14 @@
   </div>
 
   <div class="field">
+    <%= form.label :expenseTypes_id %><br />
+    <%= form.collection_select :expenseTypes_id, @expTypes, :id, :description %>
+  </div>
+
+<!--  <div class="field">
     <%= form.label :expenseType %>
     <%= form.number_field :expenseType, id: :expense_expenseType %>
-  </div>
+  </div>-->
 
   <div class="field">
     <%= form.label :description %>
