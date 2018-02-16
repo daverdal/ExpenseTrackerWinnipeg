@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180216154948) do
+ActiveRecord::Schema.define(version: 20180216170513) do
 
   create_table "expense_types", force: :cascade do |t|
     t.string "description"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20180216154948) do
     t.string "account"
     t.decimal "amount"
     t.integer "ward_id"
+    t.integer "expenseTypes_id"
+    t.index ["expenseTypes_id"], name: "index_expenses_on_expenseTypes_id"
     t.index ["ward_id"], name: "index_expenses_on_ward_id"
   end
 
