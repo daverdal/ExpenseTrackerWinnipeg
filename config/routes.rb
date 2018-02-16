@@ -1,18 +1,4 @@
 Rails.application.routes.draw do
-  resources :expensetypes
-  get 'expense_type/new'
-
-  get 'expense_type/create'
-
-  get 'expense_type/update'
-
-  get 'expense_type/edit'
-
-  get 'expense_type/destroy'
-
-  get 'expense_type/show'
-
-  get 'expense_type/index'
 
   root to: 'expenses#index'
   get 'about/index'
