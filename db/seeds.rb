@@ -11,7 +11,7 @@ Faker::Name.name
 
 Ward.delete_all
 require 'csv'
-
+puts "Outputting Wards......................"
 csv_wards = File.read(Rails.root.join('lib', 'seeds', 'wards.csv'))
 csv = CSV.parse(csv_wards, :headers => false, :encoding => 'ISO-8859-1')
 csv.each do |row|
@@ -24,6 +24,7 @@ csv.each do |row|
 end
 
 #ExpenseTypes
+# puts "Outputting ExpenseTypes......................"
 ExpenseType.delete_all
 10.times do |row|
   t = ExpenseType.new
@@ -35,6 +36,7 @@ end
 
 
 Expense.delete_all
+puts "Outputting Expenses......................"
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'expenses.csv'))
 csv1 = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 
